@@ -1,3 +1,4 @@
+import 'package:abo_maged_app/features/home/view/main_navigation/main_navigation_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:abo_maged_app/core/extensions/assets_widgets.dart';
@@ -6,7 +7,6 @@ import 'package:abo_maged_app/core/utils/app_colors.dart';
 import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
 import 'package:abo_maged_app/features/welcome/on_boarding/controller/on_boarding/on_boarding_cubit.dart';
-import 'package:abo_maged_app/features/welcome/on_boarding/view/start_screen.dart';
 import 'package:flutter_svg/svg.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -21,7 +21,7 @@ class OnBoardingScreen extends StatelessWidget {
         builder: (context, state) {
           if (state is GoToHomeState) {
             WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-              AppRoutes.routeAndRemoveAllTo(context, const StartScreen());
+              AppRoutes.routeAndRemoveAllTo(context, const MainNavigationScreen());
             });
           }
           final onBoarding = context.watch<OnBoardingCubit>();
@@ -34,7 +34,7 @@ class OnBoardingScreen extends StatelessWidget {
                       alignment: Alignment.bottomRight,
                       child: GestureDetector(
                           onTap: () {
-                            AppRoutes.routeAndRemoveTo(context, const StartScreen());
+                            AppRoutes.routeAndRemoveTo(context, const MainNavigationScreen());
                           },
                           child: Padding(
                             padding: 18.aEdge,
@@ -117,7 +117,7 @@ class OnBoardingScreen extends StatelessWidget {
                                 child: onBoarding.currentPage == onBoarding.onBoardingList.length - 1
                                     ? GestureDetector(
                                         onTap: () {
-                                          AppRoutes.routeAndRemoveAllTo(context, const StartScreen());
+                                          AppRoutes.routeAndRemoveAllTo(context, const MainNavigationScreen());
                                         },
                                         child: const Center(child: TextWidget.bigText("أبدأ", color: AppColors.whiteColor,),),)
                                     : GestureDetector(
