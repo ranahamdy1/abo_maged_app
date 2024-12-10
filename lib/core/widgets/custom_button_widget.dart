@@ -29,7 +29,6 @@ class CustomButtonWidget extends StatelessWidget {
         child: TextWidget(
           text,
           color: color,
-          fontFamily: "Somar",
         ),
       ),
 

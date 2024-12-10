@@ -13,7 +13,6 @@ class TextWidget extends StatelessWidget {
     this.fontWeight,
     this.shadows,
     this.maxLines,
-    this.fontFamily,
   });
   final String text;
   final Color? color;
@@ -24,33 +23,30 @@ class TextWidget extends StatelessWidget {
   final FontWeight? fontWeight;
   final List<Shadow>? shadows;
   final int? maxLines;
-  final String? fontFamily;
 
   const TextWidget.bigText(
     this.text, {
     super.key,
-    this.color = AppColors.mainColor,
+    this.color ,
     this.overflow,
     this.textDirection,
     this.textAlign,
-    this.fontSize = 14,
-    this.fontWeight = FontWeight.w600,
+    this.fontSize = 18,
+    this.fontWeight = FontWeight.w700,
     this.shadows,
     this.maxLines,
-    this.fontFamily = "Somar",
   });
   const TextWidget.smallText(
       this.text, {
         super.key,
-        this.color = AppColors.whiteColor,
+        this.color ,
         this.overflow,
         this.textDirection,
         this.textAlign,
-        this.fontSize = 12,
+        this.fontSize = 14,
         this.fontWeight = FontWeight.w400,
         this.shadows,
         this.maxLines,
-        this.fontFamily = "Somar",
       });
   const TextWidget.mediumText(
       this.text, {
@@ -63,7 +59,6 @@ class TextWidget extends StatelessWidget {
         this.fontWeight = FontWeight.w700,
         this.shadows,
         this.maxLines,
-        this.fontFamily = "Somar",
       });
 
   @override
@@ -79,7 +74,7 @@ class TextWidget extends StatelessWidget {
         fontSize: fontSize,
         fontWeight: fontWeight,
         shadows: shadows,
-        fontFamily: fontFamily,
+        fontFamily: "Almarai",
       ),
     );
   }

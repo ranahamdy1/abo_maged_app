@@ -52,15 +52,15 @@ class CustomTextFormField extends StatelessWidget {
           ),
           focusedErrorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(6),
-            borderSide: const BorderSide(color: AppColors.babyGreyColor, width: 1),
+            borderSide: BorderSide(color: AppColors.whiteColorWithOpacity, width: 1),
           ),
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(6),
-            borderSide: const BorderSide(color: AppColors.babyGreyColor, width: 1),
+            borderSide: BorderSide(color: AppColors.whiteColorWithOpacity, width: 1),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(6),
-            borderSide: const BorderSide(color: AppColors.babyGreyColor),
+            borderSide: BorderSide(color: AppColors.whiteColorWithOpacity),
           ),
           focusColor: AppColors.mainColor,
           hintText: hintText,
