@@ -1,16 +1,3 @@
 # abo_maged_app
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [UI](https://www.figma.com/design/j6BskCxKBZEyZNzKk9N5VE/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D9%85%D9%84%D8%AD%D9%85%D8%A9-%D8%A7%D8%A8%D9%88%D9%85%D8%A7%D8%AC%D8%AF-_test?node-id=220-21501&node-type=frame&t=jbYFOvxhjizJgjTm-0)

@@ -1,5 +1,6 @@
 import 'package:abo_maged_app/core/utils/app_assets.dart';
 import 'package:abo_maged_app/core/utils/app_colors.dart';
+import 'package:abo_maged_app/features/welcome/on_boarding/view/on_boarding_screen.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -22,7 +23,7 @@ class SplashScreen extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
         ),
-        nextScreen: const SplashScreen(),
+        nextScreen: const OnBoardingScreen(),
         backgroundColor: Colors.transparent,
       ),
     );
