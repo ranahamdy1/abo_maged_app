@@ -1,3 +1,4 @@
+import 'package:abo_maged_app/features/home/basket/view/basket_screen.dart';
 import 'package:abo_maged_app/features/home/main_navigation/widget/selection_icon_widget.dart';
 import 'package:abo_maged_app/features/home/home/view/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -57,11 +58,6 @@ class _NavigationExampleState extends State<MainNavigationScreen> {
                       label: '',
                     ),
                     NavigationDestination(
-                      selectedIcon: const SelectionIconWidget(image: 'delete2',),
-                      icon: SvgPicture.asset("delete1".getSvgAsset),
-                      label: '',
-                    ),
-                    NavigationDestination(
                       selectedIcon: const SelectionIconWidget(image: 'basket2',),
                       icon: SvgPicture.asset("basket1".getSvgAsset),
                       label: '',
@@ -79,8 +75,7 @@ class _NavigationExampleState extends State<MainNavigationScreen> {
         ),
         body: <Widget>[
           const HomeScreen(),
-          const HomeScreen(),
-          const HomeScreen(),
+          const BasketScreen(),
           const HomeScreen(),
           const HomeScreen(),
           const HomeScreen(),
