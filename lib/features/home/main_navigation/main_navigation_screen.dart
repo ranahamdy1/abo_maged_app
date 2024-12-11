@@ -1,6 +1,7 @@
 import 'package:abo_maged_app/features/home/basket/view/basket_screen.dart';
 import 'package:abo_maged_app/features/home/main_navigation/widget/selection_icon_widget.dart';
 import 'package:abo_maged_app/features/home/home/view/home_screen.dart';
+import 'package:abo_maged_app/features/home/orders/view/orders_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:abo_maged_app/core/utils/app_assets.dart';
 import 'package:abo_maged_app/core/utils/app_colors.dart';
@@ -76,7 +77,7 @@ class _NavigationExampleState extends State<MainNavigationScreen> {
         body: <Widget>[
           const HomeScreen(),
           const BasketScreen(),
-          const HomeScreen(),
+          const OrdersScreen(),
           const HomeScreen(),
           const HomeScreen(),
         ][currentPageIndex],
