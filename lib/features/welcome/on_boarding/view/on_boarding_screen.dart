@@ -1,4 +1,4 @@
-import 'package:abo_maged_app/features/home/view/main_navigation/main_navigation_screen.dart';
+import 'package:abo_maged_app/features/home/main_navigation/main_navigation_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:abo_maged_app/core/extensions/assets_widgets.dart';
@@ -89,11 +89,35 @@ class OnBoardingScreen extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
+                              Container(
+                                height: 68,
+                                width: 68,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(88),
+                                  border: Border.all(color: AppColors.whiteColor),
+                                ),
+                                child: onBoarding.currentPage == onBoarding.onBoardingList.length - 1
+                                    ? GestureDetector(
+                                  onTap: () {
+                                    AppRoutes.routeAndRemoveAllTo(context, const MainNavigationScreen());
+                                  },
+                                  child: const Center(child: TextWidget.bigText("أبدأ", color: AppColors.whiteColor,),),)
+                                    : GestureDetector(
+                                  onTap: () {
+                                    context.read<OnBoardingCubit>().next();
+                                  },
+                                  child: const Icon(
+                                    Icons.arrow_back,
+                                    color: AppColors.whiteColor,
+                                  ),
+                                ),
+                              ),
+                              22.wSize,
                               Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: List.generate(
                                   onBoarding.onBoardingList.length,
-                                  (index) => AnimatedContainer(
+                                      (index) => AnimatedContainer(
                                     duration: const Duration(milliseconds: 500),
                                     curve: Curves.bounceInOut,
                                     width: index == onBoarding.currentPage ? 44 : 8,
@@ -104,30 +128,6 @@ class OnBoardingScreen extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(4),
                                     ),
                                   ),
-                                ),
-                              ),
-                              22.wSize,
-                              Container(
-                                height: 68,
-                                width: 68,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(88),
-                                  border: Border.all(color: AppColors.whiteColor),
-                                ),
-                                child: onBoarding.currentPage == onBoarding.onBoardingList.length - 1
-                                    ? GestureDetector(
-                                        onTap: () {
-                                          AppRoutes.routeAndRemoveAllTo(context, const MainNavigationScreen());
-                                        },
-                                        child: const Center(child: TextWidget.bigText("أبدأ", color: AppColors.whiteColor,),),)
-                                    : GestureDetector(
-                                        onTap: () {
-                                          context.read<OnBoardingCubit>().next();
-                                        },
-                                        child: const Icon(
-                                          Icons.arrow_forward,
-                                          color: AppColors.whiteColor,
-                                        ),
                                 ),
                               ),
                             ],

@@ -1,5 +1,5 @@
-import 'package:abo_maged_app/features/home/view/main_navigation/widget/selection_icon_widget.dart';
-import 'package:abo_maged_app/features/home/view/home/home_screen.dart';
+import 'package:abo_maged_app/features/home/main_navigation/widget/selection_icon_widget.dart';
+import 'package:abo_maged_app/features/home/home/view/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:abo_maged_app/core/utils/app_assets.dart';
 import 'package:abo_maged_app/core/utils/app_colors.dart';
@@ -42,13 +42,8 @@ class _NavigationExampleState extends State<MainNavigationScreen> {
                   selectedIndex: currentPageIndex,
                   destinations: <Widget>[
                     NavigationDestination(
-                      selectedIcon: const SelectionIconWidget(image: 'profile2',),
-                      icon: SvgPicture.asset("profile1".getSvgAsset),
-                      label: '',
-                    ),
-                    NavigationDestination(
-                      selectedIcon: const SelectionIconWidget(image: 'basket2',),
-                      icon: SvgPicture.asset("basket1".getSvgAsset),
+                      selectedIcon: const SelectionIconWidget(image: 'home_icon2',),
+                      icon: SvgPicture.asset("home_icon1".getSvgAsset),
                       label: '',
                     ),
                     NavigationDestination(
@@ -67,8 +62,13 @@ class _NavigationExampleState extends State<MainNavigationScreen> {
                       label: '',
                     ),
                     NavigationDestination(
-                      selectedIcon: const SelectionIconWidget(image: 'home_icon2',),
-                      icon: SvgPicture.asset("home_icon1".getSvgAsset),
+                      selectedIcon: const SelectionIconWidget(image: 'basket2',),
+                      icon: SvgPicture.asset("basket1".getSvgAsset),
+                      label: '',
+                    ),
+                    NavigationDestination(
+                      selectedIcon: const SelectionIconWidget(image: 'profile2',),
+                      icon: SvgPicture.asset("profile1".getSvgAsset),
                       label: '',
                     ),
                   ],
