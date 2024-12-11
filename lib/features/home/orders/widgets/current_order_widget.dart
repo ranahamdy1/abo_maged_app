@@ -15,7 +15,7 @@ class CurrentOrderWidget extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
-            height: 140.h,
+            height: 122.h,
             width: 368.w,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
@@ -31,7 +31,7 @@ class CurrentOrderWidget extends StatelessWidget {
                     children: [
                       const TextWidget("طلب رقم",color: AppColors.yellowColor,),
                       Container(
-                        height: 38.h,
+                        height: 25.h,
                         width: 86.w,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(6),
