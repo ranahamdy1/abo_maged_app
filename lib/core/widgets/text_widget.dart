@@ -70,7 +70,7 @@ class TextWidget extends StatelessWidget {
       textAlign: textAlign,
       maxLines: 20,
       style: TextStyle(
-        color: color,
+        color: AppColors.whiteColor,
         fontSize: fontSize,
         fontWeight: fontWeight,
         shadows: shadows,
