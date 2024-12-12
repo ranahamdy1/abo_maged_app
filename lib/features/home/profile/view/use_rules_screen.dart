@@ -31,7 +31,7 @@ class UseRulesScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(8.0.w),
+        padding: EdgeInsets.all(12.0.w),
         child: Column(
           children: [
             Container(

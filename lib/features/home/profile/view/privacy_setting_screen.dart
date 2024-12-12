@@ -2,6 +2,7 @@ import 'package:abo_maged_app/core/utils/app_assets.dart';
 import 'package:abo_maged_app/core/utils/app_colors.dart';
 import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
+import 'package:abo_maged_app/features/home/profile/widgets/privacy_setting_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -31,7 +32,7 @@ class PrivacySettingScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(8.0.w),
+        padding: EdgeInsets.all(12.0.w),
         child: Column(
           children: [
             Container(
@@ -57,7 +58,11 @@ class PrivacySettingScreen extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
+            SizedBox(height: 22.h,),
+            const PrivacySettingWidget(text: 'أوافق علي سياسة التطبيق', backGroundColor: AppColors.secondColor, borderColor: AppColors.secondColor,),
+            SizedBox(height: 12.h,),
+            PrivacySettingWidget(text: ' لا أوافق علي سياسة التطبيق', backGroundColor: Colors.transparent, borderColor: AppColors.whiteColorWithOpacity,),
           ],
         ),
       ),
