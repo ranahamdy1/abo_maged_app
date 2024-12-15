@@ -2,6 +2,7 @@ import 'package:abo_maged_app/core/utils/app_assets.dart';
 import 'package:abo_maged_app/core/utils/app_colors.dart';
 import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
+import 'package:abo_maged_app/features/auth/sign_up/view/sign_up_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/privacy_setting_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/use_rules_screen.dart';
 import 'package:abo_maged_app/features/home/profile/widgets/setting_widget.dart';
@@ -24,7 +25,11 @@ class ProfileScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset("profile_image".getPngAsset),
-                  const TextWidget.bigText("تسجيل الدخول", color: AppColors.whiteColor),
+                  GestureDetector(
+                      onTap: (){
+                        AppRoutes.routeTo(context, SignUpScreen());
+                      },
+                      child: const TextWidget.bigText("تسجيل الدخول", color: AppColors.whiteColor)),
                   SizedBox(height: 18.h),
                   Container(
                     height: 222.h,

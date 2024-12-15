@@ -42,7 +42,16 @@ flutter:
   assets:
     - assets/images/
     - assets/svgs/
-
+    - assets/svgs/countries/ae.svg
+    - assets/svgs/countries/eg.svg
+    - assets/svgs/countries/iq.svg
+    - assets/svgs/countries/jo.svg
+    - assets/svgs/countries/kw.svg
+    - assets/svgs/countries/ma.svg
+    - assets/svgs/countries/om.svg
+    - assets/svgs/countries/qa.svg
+    - assets/svgs/countries/sa.svg
+    - assets/svgs/countries/lb.svg
   fonts:
     - family: Almarai
       fonts:

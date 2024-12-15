@@ -3,6 +3,7 @@ import 'package:abo_maged_app/core/utils/app_colors.dart';
 import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
 import 'package:abo_maged_app/features/home/basket/widgets/color_border_widget.dart';
+import 'package:abo_maged_app/features/home/profile/view/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -301,14 +302,19 @@ class ProductDetailsScreen extends StatelessWidget {
                         child: const Icon(Icons.remove, color: AppColors.whiteColor),
                       ),
                       SizedBox(width: 6.w),
-                      Container(
-                        height: 44.h,
-                        width: 188.w,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12.r),
-                          color: AppColors.secondColor,
+                      GestureDetector(
+                        onTap: (){
+                          AppRoutes.routeTo(context, const ProfileScreen());
+                        },
+                        child: Container(
+                          height: 44.h,
+                          width: 188.w,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12.r),
+                            color: AppColors.secondColor,
+                          ),
+                          child: const Center(child: TextWidget("أضف الي السلة")),
                         ),
-                        child: const Center(child: TextWidget("أضف الي السلة")),
                       ),
                     ],
                   )
