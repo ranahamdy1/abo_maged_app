@@ -1,6 +1,8 @@
 import 'package:abo_maged_app/core/utils/app_assets.dart';
 import 'package:abo_maged_app/core/utils/app_colors.dart';
+import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
+import 'package:abo_maged_app/features/home/orders/view/oreder_details_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -39,10 +41,15 @@ class CurrentOrderWidget extends StatelessWidget {
                           color: AppColors.secondColor,
                         ),
                         child: Center(
-                          child: TextWidget(
-                            "عرض التفاصيل",
-                            color: AppColors.whiteColor,
-                            fontSize: 9.sp,
+                          child: GestureDetector(
+                            onTap: (){
+                              AppRoutes.routeTo(context, const OrederDetailsScreen());
+                            },
+                            child: TextWidget(
+                              "عرض التفاصيل",
+                              color: AppColors.whiteColor,
+                              fontSize: 9.sp,
+                            ),
                           ),
                         ),
                       ),
