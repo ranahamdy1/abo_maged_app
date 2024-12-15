@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:abo_maged_app/core/utils/app_colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextWidget extends StatelessWidget {
   const TextWidget(
-    this.text, {
-    super.key,
-    this.color,
-    this.overflow,
-    this.textDirection,
-    this.textAlign,
-    this.fontSize,
-    this.fontWeight,
-    this.shadows,
-    this.maxLines,
-  });
+      this.text, {
+        super.key,
+        this.color,
+        this.overflow,
+        this.textDirection,
+        this.textAlign,
+        this.fontSize,
+        this.fontWeight,
+        this.shadows,
+        this.maxLines,
+      });
   final String text;
   final Color? color;
   final TextOverflow? overflow;
@@ -25,21 +26,21 @@ class TextWidget extends StatelessWidget {
   final int? maxLines;
 
   const TextWidget.bigText(
-    this.text, {
-    super.key,
-    this.color ,
-    this.overflow,
-    this.textDirection,
-    this.textAlign,
-    this.fontSize = 18,
-    this.fontWeight = FontWeight.w700,
-    this.shadows,
-    this.maxLines,
-  });
+      this.text, {
+        super.key,
+        this.color,
+        this.overflow,
+        this.textDirection,
+        this.textAlign,
+        this.fontSize = 15,
+        this.fontWeight = FontWeight.w700,
+        this.shadows,
+        this.maxLines,
+      });
   const TextWidget.smallText(
       this.text, {
         super.key,
-        this.color ,
+        this.color,
         this.overflow,
         this.textDirection,
         this.textAlign,
@@ -68,10 +69,10 @@ class TextWidget extends StatelessWidget {
       overflow: overflow ?? TextOverflow.ellipsis,
       textDirection: textDirection,
       textAlign: textAlign,
-      maxLines: 20,
+      maxLines: maxLines ?? 20,
       style: TextStyle(
-        color: AppColors.whiteColor,
-        fontSize: fontSize,
+        color: color ?? AppColors.whiteColor,
+        fontSize: fontSize?.sp ?? 13.sp,
         fontWeight: fontWeight,
         shadows: shadows,
         fontFamily: "Almarai",

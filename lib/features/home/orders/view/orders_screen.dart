@@ -21,7 +21,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.mainColor,
-        title: const TextWidget.bigText("الطلبات", color: AppColors.whiteColor),
+        title: const TextWidget.bigText("الطلبات", color: AppColors.whiteColor,),
         centerTitle: true,
       ),
       body: Column(
@@ -30,9 +30,10 @@ class _OrdersScreenState extends State<OrdersScreen> {
             width: double.infinity,
             height: 500.h,
             child: ContainedTabBarView(
-              tabBarProperties: const TabBarProperties(
+              tabBarProperties: TabBarProperties(
                 indicator: BoxDecoration(
                   color: AppColors.mainColor,
+                  borderRadius: BorderRadius.circular(9.r),
                 ),
                 indicatorSize: TabBarIndicatorSize.label,
               ),
@@ -41,17 +42,18 @@ class _OrdersScreenState extends State<OrdersScreen> {
                   height: 40.h,
                   width: 144.w,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(9),
+                    borderRadius: BorderRadius.circular(9.r),
                     border: Border.all(
                       color: _selectedIndex == 0
                           ? AppColors.yellowColor
-                          : AppColors.whiteColor,
+                          : AppColors.babyMainColor,
                     ),
                   ),
-                  child: const Center(
+                  child: Center(
                     child: TextWidget(
                       "طلبات سابقة",
                       color: AppColors.whiteColor,
+                      fontSize: 14.sp,
                     ),
                   ),
                 ),
@@ -59,17 +61,18 @@ class _OrdersScreenState extends State<OrdersScreen> {
                   height: 40.h,
                   width: 144.w,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(9),
+                    borderRadius: BorderRadius.circular(9.r),
                     border: Border.all(
                       color: _selectedIndex == 1
                           ? AppColors.yellowColor
-                          : AppColors.whiteColor,
+                          : AppColors.babyMainColor,
                     ),
                   ),
-                  child: const Center(
+                  child: Center(
                     child: TextWidget(
                       "طلبات حالية",
                       color: AppColors.whiteColor,
+                      fontSize: 14.sp,
                     ),
                   ),
                 ),

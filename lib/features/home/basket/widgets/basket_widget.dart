@@ -48,6 +48,7 @@ class BasketWidget extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.right,
                     textDirection: TextDirection.rtl,
+                    fontSize: 9.sp,
                   ),
                   SizedBox(height: 8.h),
                   Row(

@@ -7,7 +7,7 @@ import 'package:abo_maged_app/features/home/profile/view/use_rules_screen.dart';
 import 'package:abo_maged_app/features/home/profile/widgets/setting_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -24,92 +24,92 @@ class ProfileScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset("profile_image".getPngAsset),
-                  const TextWidget.bigText("تسجيل الدخول",color: AppColors.whiteColor),
+                  const TextWidget.bigText("تسجيل الدخول", color: AppColors.whiteColor),
                   SizedBox(height: 18.h),
                   Container(
                     height: 222.h,
                     width: 348.w,
                     decoration: BoxDecoration(
-                      color: AppColors.secondColor,
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: AppColors.whiteColorWithOpacity)
+                        color: AppColors.secondColor,
+                        borderRadius: BorderRadius.circular(12.r),
+                        border: Border.all(color: AppColors.whiteColorWithOpacity)
                     ),
                     child: Padding(
                       padding: EdgeInsets.all(18.0.w),
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SettingWidget(image: 'my_data', text: 'بياناتي',icon: Icons.arrow_forward_ios,),
-                          Divider(color: AppColors.mainColor,),
-                          SettingWidget(image: 'my_address', text: 'عناويني',icon: Icons.arrow_forward_ios,),
-                          Divider(color: AppColors.mainColor,),
-                          SettingWidget(image: 'my_fav', text: 'المفضلة',icon: Icons.arrow_forward_ios,),
-                          Divider(color: AppColors.mainColor,),
-                          SettingWidget(image: 'delete_account', text: 'حذف الحساب',),
+                          SettingWidget(image: 'my_data', text: 'بياناتي', icon: Icons.arrow_forward_ios),
+                          Divider(color: AppColors.mainColor),
+                          SettingWidget(image: 'my_address', text: 'عناويني', icon: Icons.arrow_forward_ios),
+                          Divider(color: AppColors.mainColor),
+                          SettingWidget(image: 'my_fav', text: 'المفضلة', icon: Icons.arrow_forward_ios),
+                          Divider(color: AppColors.mainColor),
+                          SettingWidget(image: 'delete_account', text: 'حذف الحساب'),
                         ],
                       ),
                     ),
                   ),
                   SizedBox(height: 18.h),
                   const Align(
-                      alignment: Alignment.topRight,
-                      child: TextWidget.bigText("الاعدادت",color: AppColors.whiteColor),
+                    alignment: Alignment.topRight,
+                    child: TextWidget.bigText("الاعدادت", color: AppColors.whiteColor),
                   ),
                   SizedBox(height: 8.h),
                   Container(
                     height: 222.h,
                     width: 348.w,
                     decoration: BoxDecoration(
-                      color: AppColors.secondColor,
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: AppColors.whiteColorWithOpacity)
+                        color: AppColors.secondColor,
+                        borderRadius: BorderRadius.circular(12.r),
+                        border: Border.all(color: AppColors.whiteColorWithOpacity)
                     ),
                     child: Padding(
                       padding: EdgeInsets.all(18.0.w),
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SettingWidget(image: 'lang', text: 'English',),
-                          Divider(color: AppColors.mainColor,),
-                          SettingWidget(image: 'light', text: 'الوضع المضئ',),
-                          Divider(color: AppColors.mainColor,),
-                          SettingWidget(image: 'main_color', text: 'الوضع الاساسي',),
-                          Divider(color: AppColors.mainColor,),
-                          SettingWidget(image: 'dark', text: 'الوضع الليلي',),
+                          SettingWidget(image: 'lang', text: 'English'),
+                          Divider(color: AppColors.mainColor),
+                          SettingWidget(image: 'light', text: 'الوضع المضئ'),
+                          Divider(color: AppColors.mainColor),
+                          SettingWidget(image: 'main_color', text: 'الوضع الاساسي'),
+                          Divider(color: AppColors.mainColor),
+                          SettingWidget(image: 'dark', text: 'الوضع الليلي'),
                         ],
                       ),
                     ),
                   ),
                   SizedBox(height: 18.h),
                   const Align(
-                      alignment: Alignment.topRight,
-                      child: TextWidget.bigText("المساعدة والدعم",color: AppColors.whiteColor),
+                    alignment: Alignment.topRight,
+                    child: TextWidget.bigText("المساعدة والدعم", color: AppColors.whiteColor),
                   ),
                   SizedBox(height: 8.h),
                   Container(
                     height: 300.h,
                     width: 348.w,
                     decoration: BoxDecoration(
-                      color: AppColors.secondColor,
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: AppColors.whiteColorWithOpacity)
+                        color: AppColors.secondColor,
+                        borderRadius: BorderRadius.circular(12.r),
+                        border: Border.all(color: AppColors.whiteColorWithOpacity)
                     ),
                     child: Padding(
                       padding: EdgeInsets.all(18.0.w),
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SettingWidget(image: 'lang', text: 'تواصل معنا عبر واتساب',),
-                          Divider(color: AppColors.mainColor,),
-                          SettingWidget(image: 'light', text: 'الاسئلة الشائعة',icon: Icons.arrow_forward_ios,),
-                          Divider(color: AppColors.mainColor,),
-                          SettingWidget(image: 'light', text: 'عن التطبيق',icon: Icons.arrow_forward_ios,),
-                          Divider(color: AppColors.mainColor,),
-                          SettingWidget(image: 'dark', text: 'خدماتنا',icon: Icons.arrow_forward_ios,),
-                          Divider(color: AppColors.mainColor,),
-                          SettingWidget(image: 'main_color', text: 'قيم التطبيق',),
-                          Divider(color: AppColors.mainColor,),
-                          SettingWidget(image: 'dark', text: 'مشاركة التطبيق',),
+                          SettingWidget(image: 'lang', text: 'تواصل معنا عبر واتساب'),
+                          Divider(color: AppColors.mainColor),
+                          SettingWidget(image: 'light', text: 'الاسئلة الشائعة', icon: Icons.arrow_forward_ios),
+                          Divider(color: AppColors.mainColor),
+                          SettingWidget(image: 'light', text: 'عن التطبيق', icon: Icons.arrow_forward_ios),
+                          Divider(color: AppColors.mainColor),
+                          SettingWidget(image: 'dark', text: 'خدماتنا', icon: Icons.arrow_forward_ios),
+                          Divider(color: AppColors.mainColor),
+                          SettingWidget(image: 'main_color', text: 'قيم التطبيق'),
+                          Divider(color: AppColors.mainColor),
+                          SettingWidget(image: 'dark', text: 'مشاركة التطبيق'),
                         ],
                       ),
                     ),
@@ -120,12 +120,12 @@ class ProfileScreen extends StatelessWidget {
                     width: 348.w,
                     decoration: BoxDecoration(
                         color: AppColors.secondColor,
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.r),
                         border: Border.all(color: AppColors.whiteColorWithOpacity)
                     ),
                     child: Padding(
                       padding: EdgeInsets.all(10.0.w),
-                      child: const SettingWidget(image: 'log_out', text: 'تسجيل الخروج',),
+                      child: const SettingWidget(image: 'log_out', text: 'تسجيل الخروج'),
                     ),
                   ),
                   SizedBox(height: 18.h),
@@ -133,16 +133,18 @@ class ProfileScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       InkWell(
-                          onTap: (){
-                            AppRoutes.routeTo(context, const PrivacySettingScreen());
-                          },
-                          child: const TextWidget("سياسية الخصوصية  ",)),
+                        onTap: () {
+                          AppRoutes.routeTo(context, const PrivacySettingScreen());
+                        },
+                        child: const TextWidget("سياسية الخصوصية  "),
+                      ),
                       const TextWidget(" | "),
                       InkWell(
-                          onTap: (){
-                            AppRoutes.routeTo(context, const UseRulesScreen());
-                          },
-                          child: const TextWidget("  شروط الاستخدام")),
+                        onTap: () {
+                          AppRoutes.routeTo(context, const UseRulesScreen());
+                        },
+                        child: const TextWidget("  شروط الاستخدام"),
+                      ),
                     ],
                   ),
                   SizedBox(height: 18.h),

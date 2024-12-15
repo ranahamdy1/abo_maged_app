@@ -13,56 +13,70 @@ class CurrentOrderWidget extends StatelessWidget {
       itemCount: 1,
       itemBuilder: (BuildContext context, int index) {
         return Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0.w),
           child: Container(
-            height: 122.h,
+            height: 140.h,
             width: 368.w,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppColors.whiteColor)
+              borderRadius: BorderRadius.circular(12.r),
+              border: Border.all(color: AppColors.babyMainColor),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const TextWidget("طلب رقم",color: AppColors.yellowColor,),
+                      const TextWidget("طلب رقم", color: AppColors.yellowColor),
                       Container(
                         height: 25.h,
                         width: 86.w,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(6),
-                            border: Border.all(color: AppColors.whiteColor),
-                            color: AppColors.secondColor
+                          borderRadius: BorderRadius.circular(6.r),
+                          border: Border.all(color: AppColors.babyMainColor),
+                          color: AppColors.secondColor,
                         ),
-                        child: const Center(child: TextWidget("عرض التفاصيل",color: AppColors.whiteColor,)),
-                      )
+                        child: Center(
+                          child: TextWidget(
+                            "عرض التفاصيل",
+                            color: AppColors.whiteColor,
+                            fontSize: 9.sp,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
-                  const TextWidget("23/8/2023",color: AppColors.whiteColor,),
+                  const TextWidget(
+                    "23/8/2023",
+                    color: AppColors.whiteColor,
+                  ),
                   SizedBox(
                     height: 46.h,
-                    width: 46.w,
                     child: ListView.builder(
                       itemCount: 3,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (BuildContext context, int index) {
-                        return Image.asset("order".getPngAsset);
+                        return SizedBox(
+                          height: 46.h,
+                          width: 46.w,
+                          child: Image.asset("order".getPngAsset),
+                        );
                       },
                     ),
                   ),
                   const Row(
                     children: [
-                      TextWidget.mediumText("عدد العناصر   ",color: AppColors.yellowColor,),
-                      TextWidget("3",color: AppColors.whiteColor,),
+                      TextWidget.mediumText("عدد العناصر   ",
+                          color: AppColors.yellowColor),
+                      TextWidget("3", color: AppColors.whiteColor),
                       Spacer(),
-                      TextWidget.mediumText("الاجمالي    ",color: AppColors.yellowColor,),
-                      TextWidget("240 ريال",color: AppColors.whiteColor,),
+                      TextWidget.mediumText("الاجمالي    ",
+                          color: AppColors.yellowColor),
+                      TextWidget("240 ريال", color: AppColors.whiteColor),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),

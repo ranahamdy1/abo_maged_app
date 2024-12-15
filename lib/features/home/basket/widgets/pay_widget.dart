@@ -13,18 +13,18 @@ class PayWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
-      width: 368,
+      height: 55.h,
+      width: 368.w,
       decoration: BoxDecoration(
           color: AppColors.secondColor,
-          borderRadius: BorderRadius.circular(9),
+          borderRadius: BorderRadius.circular(9.r),
           border: Border.all(color: AppColors.mainColor)
       ),
       child: Row(
         children: [
-          SizedBox(width: 9.w,),
+          SizedBox(width: 9.w),
           SvgPicture.asset(image.getSvgAsset),
-          SizedBox(width: 9.w,),
+          SizedBox(width: 9.w),
           TextWidget(text,color: AppColors.whiteColor,),
         ],
       ),

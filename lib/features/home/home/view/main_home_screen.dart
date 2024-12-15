@@ -27,31 +27,37 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
           padding: EdgeInsets.only(right: 18.0.w),
           child: const Align(
             alignment: Alignment.topRight,
-              child: TextWidget.bigText("يوميات",color: AppColors.whiteColor,),
+            child: TextWidget.bigText(
+              "يوميات",
+              color: AppColors.whiteColor,
+            ),
           ),
         ),
         SizedBox(height: 12.h),
         SizedBox(
-          height: 100,
+          height: 100.h,
           child: ListView.builder(
             itemCount: 10,
             scrollDirection: Axis.horizontal,
             itemBuilder: (BuildContext context, int index) {
               return Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0.w),
                 child: Column(
                   children: [
                     Container(
                       height: 44.h,
                       width: 48.w,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(44.r),
-                          border: Border.all(color: AppColors.yellowColor)
+                        borderRadius: BorderRadius.circular(44.r),
+                        border: Border.all(color: AppColors.yellowColor),
                       ),
                       child: Image.asset("food".getPngAsset),
                     ),
                     SizedBox(height: 3.h),
-                    const TextWidget.mediumText("ذبيحة اليوم",color: AppColors.whiteColor,)
+                    const TextWidget.mediumText(
+                      "ذبيحة اليوم",
+                      color: AppColors.whiteColor,
+                    ),
                   ],
                 ),
               );
@@ -62,9 +68,12 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
           padding: EdgeInsets.all(18.0.w),
           child: const Row(
             children: [
-              TextWidget.bigText("عروض مميزة",color: AppColors.whiteColor),
+              TextWidget.bigText("عروض مميزة", color: AppColors.whiteColor),
               Spacer(),
-              TextWidget.smallText("عرض الكل",color: AppColors.yellowColor,),
+              TextWidget.smallText(
+                "عرض الكل",
+                color: AppColors.yellowColor,
+              ),
             ],
           ),
         ),
@@ -72,47 +81,52 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
           itemCount: urlImages.length,
           itemBuilder: (context, index, realIndex) {
             final urlImage = urlImages[index];
-            return buildImage(urlImage,index);
+            return buildImage(urlImage, index);
           },
           options: CarouselOptions(
-              height: 125,
-              autoPlay: true,
-              viewportFraction: 0.70,
+            height: 120.h,
+            autoPlay: true,
+            viewportFraction: 0.80,
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 18.0.w,right: 18.0.w,left: 18.0.w),
+          padding: EdgeInsets.symmetric(horizontal: 18.0.w, vertical: 18.0.h),
           child: const Row(
             children: [
-              TextWidget.bigText("التصنيفات",color: AppColors.whiteColor),
+              TextWidget.bigText("التصنيفات", color: AppColors.whiteColor),
               Spacer(),
-              TextWidget.smallText("عرض الكل",color: AppColors.yellowColor,),
+              TextWidget.smallText(
+                "عرض الكل",
+                color: AppColors.yellowColor,
+              ),
             ],
           ),
         ),
-        SizedBox(height: 12.h),
         SizedBox(
-          height: 100,
+          height: 100.h,
           child: ListView.builder(
             itemCount: 10,
             scrollDirection: Axis.horizontal,
             itemBuilder: (BuildContext context, int index) {
               return Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0.w),
                 child: Container(
                   height: 96.h,
                   width: 89.w,
                   padding: EdgeInsets.all(5.w),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12.r),
-                      border: Border.all(color: AppColors.yellowColor),
-                      color: AppColors.secondColor
+                    borderRadius: BorderRadius.circular(12.r),
+                    border: Border.all(color: AppColors.yellowColor),
+                    color: AppColors.secondColor,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Image.asset("food".getPngAsset),
-                      const TextWidget.mediumText("ذبيحة اليوم",color: AppColors.whiteColor,)
+                      const TextWidget.mediumText(
+                        "ذبيحة اليوم",
+                        color: AppColors.whiteColor,
+                      ),
                     ],
                   ),
                 ),
@@ -121,16 +135,18 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 18.0.w,right: 18.0.w,left: 18.0.w),
+          padding: EdgeInsets.symmetric(horizontal: 18.0.w, vertical: 18.0.h),
           child: const Row(
             children: [
-              TextWidget.bigText("مفروم",color: AppColors.whiteColor),
+              TextWidget.bigText("مفروم", color: AppColors.whiteColor),
               Spacer(),
-              TextWidget.smallText("عرض الكل",color: AppColors.yellowColor,),
+              TextWidget.smallText(
+                "عرض الكل",
+                color: AppColors.yellowColor,
+              ),
             ],
           ),
         ),
-        SizedBox(height: 12.h),
         SizedBox(
           height: 155.h,
           child: ListView.builder(
@@ -138,31 +154,39 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
             scrollDirection: Axis.horizontal,
             itemBuilder: (BuildContext context, int index) {
               return Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0.w),
                 child: Container(
                   height: 100.h,
                   width: 104.w,
                   padding: EdgeInsets.all(5.w),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(9.r),
-                      color: AppColors.secondColor
+                    borderRadius: BorderRadius.circular(9.r),
+                    color: AppColors.secondColor,
                   ),
                   child: Column(
                     children: [
                       SizedBox(
-                          height: 66.h,
-                          width: 104.w,
-                          child: Image.asset("food2".getPngAsset)),
+                        height: 66.h,
+                        width: 104.w,
+                        child: Image.asset("food2".getPngAsset),
+                      ),
                       SizedBox(
-                          height: 55.h,
-                          width: 104.w,
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              TextWidget.mediumText("مفروم غنم",color: AppColors.whiteColor,),
-                              TextWidget.mediumText("120 ريال",color: AppColors.yellowColor,),
-                            ],
-                          ))
+                        height: 55.h,
+                        width: 104.w,
+                        child: const Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            TextWidget.mediumText(
+                              "مفروم غنم",
+                              color: AppColors.whiteColor,
+                            ),
+                            TextWidget.mediumText(
+                              "120 ريال",
+                              color: AppColors.yellowColor,
+                            ),
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),
@@ -175,5 +199,8 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
   }
 }
 
-Widget buildImage(String urlImage, int index) =>
-    Image.asset(urlImage,fit: BoxFit.cover,width: 271,);
+Widget buildImage(String urlImage, int index) => Image.asset(
+  urlImage,
+  fit: BoxFit.cover,
+  width: 271.w,
+);

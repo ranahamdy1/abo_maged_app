@@ -1,4 +1,3 @@
-import 'package:abo_maged_app/core/extensions/assets_widgets.dart';
 import 'package:abo_maged_app/core/utils/app_assets.dart';
 import 'package:abo_maged_app/core/utils/app_colors.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
@@ -26,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding:  EdgeInsets.all(18.0.w),
+              padding: EdgeInsets.all(18.0.w),
               child: Row(
                 children: [
                   SizedBox(
@@ -75,11 +74,11 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Padding(
-              padding:  EdgeInsets.all(18.0.w),
+              padding: EdgeInsets.all(18.0.w),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  _buildDeliveryOption(
+                  DeliveryOption(
                     isSelected: isHomeDeliverySelected,
                     onTap: () {
                       setState(() {
@@ -90,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     asset: "drivery".getSvgAsset,
                     label: "توصيل للمنزل",
                   ),
-                  _buildDeliveryOption(
+                  DeliveryOption(
                     isSelected: isPickupSelected,
                     onTap: () {
                       setState(() {
@@ -99,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       });
                     },
                     asset: "drivery".getSvgAsset,
-                    label: "استلام من المتجر",
+                    label: "استلام من الفرع",
                   ),
                 ],
               ),
@@ -108,13 +107,13 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.all(18.0.w),
               child: Column(
                 children: [
-                  12.hSize,
+                  SizedBox(height: 12.h),
                   SizedBox(
                     height: 193.h,
                     width: 276.w,
                     child: SvgPicture.asset("on_boarding1".getSvgAsset),
                   ),
-                  22.hSize,
+                  SizedBox(height: 22.h),
                   SizedBox(
                     height: 100.h,
                     width: 276.w,
@@ -134,13 +133,24 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+}
 
-  Widget _buildDeliveryOption({
-    required bool isSelected,
-    required VoidCallback onTap,
-    required String asset,
-    required String label,
-  }) {
+class DeliveryOption extends StatelessWidget {
+  final bool isSelected;
+  final VoidCallback onTap;
+  final String asset;
+  final String label;
+
+  const DeliveryOption({
+    super.key,
+    required this.isSelected,
+    required this.onTap,
+    required this.asset,
+    required this.label,
+  });
+
+  @override
+  Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: Container(

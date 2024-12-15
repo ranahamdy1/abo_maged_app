@@ -14,7 +14,7 @@ class MainBasketScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 18.0.w,right: 18.0.w,left: 18.0.w),
+      padding: EdgeInsets.only(top: 18.0.h,right: 18.0.w,left: 18.0.w),
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -24,7 +24,7 @@ class MainBasketScreen extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
-                  padding: EdgeInsets.only(bottom: 12.0.w),
+                  padding: EdgeInsets.only(bottom: 12.0.h),
                   child: const ColorBorderWidget(child: BasketWidget()),
                 );
               },
@@ -36,17 +36,18 @@ class MainBasketScreen extends StatelessWidget {
             SizedBox(height: 9.h),
             ColorBorderWidget(
               child: Container(
-                height: 56,
-                width: 368,
+                height: 56.h,
+                width: double.infinity,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: AppColors.whiteColor)
+                  color: AppColors.mainColor,
+                  borderRadius: BorderRadius.circular(9),
+                  border: Border.all(color: AppColors.babyMainColor)
                 ),
                 child: Row(
                   children: [
-                    9.wSize,
+                    SizedBox(width: 9.w),
                     const Icon(Icons.location_on,color: AppColors.yellowColor,),
-                    3.wSize,
+                    SizedBox(width: 3.w),
                     const TextWidget("المنزل",color: AppColors.whiteColor,)
                   ],
                 ),
@@ -68,11 +69,11 @@ class MainBasketScreen extends StatelessWidget {
                     padding: EdgeInsets.all(7.0.w),
                     child: ColorBorderWidget(
                       child: Container(
-                        height: 63,
-                        width: 77,
+                        height: 63.h,
+                        width: 77.w,
                         decoration: BoxDecoration(
                             color: AppColors.secondColor,
-                            borderRadius: BorderRadius.circular(9),
+                            borderRadius: BorderRadius.circular(9.r),
                             border: Border.all(color: AppColors.secondColor)
                         ),
                         child: const Column(
@@ -104,11 +105,11 @@ class MainBasketScreen extends StatelessWidget {
                     padding: EdgeInsets.all(3.0.w),
                     child: ColorBorderWidget(
                       child: Container(
-                        height: 42,
-                        width: 96,
+                        height: 42.h,
+                        width: 96.w,
                         decoration: BoxDecoration(
                             color: AppColors.secondColor,
-                            borderRadius: BorderRadius.circular(9),
+                            borderRadius: BorderRadius.circular(9.r),
                             border: Border.all(color: AppColors.secondColor)
                         ),
                         child: const Center(child: TextWidget("فترة الصباح",color: AppColors.whiteColor,)),
@@ -130,18 +131,18 @@ class MainBasketScreen extends StatelessWidget {
             SizedBox(height: 9.h),
             ColorBorderWidget(
               child: Container(
-                height: 60,
-                width: 368,
+                height: 55.h,
+                width: 368.w,
                 decoration: BoxDecoration(
                     color: AppColors.secondColor,
-                    borderRadius: BorderRadius.circular(9),
+                    borderRadius: BorderRadius.circular(9.r),
                     border: Border.all(color: AppColors.mainColor)
                 ),
                 child: Row(
                   children: [
-                    SizedBox(width: 9.w,),
+                    SizedBox(width: 9.w),
                     Image.asset("tabby".getPngAsset),
-                    SizedBox(width: 9.w,),
+                    SizedBox(width: 9.w),
                     const TextWidget("دفع عن طريق تابي",color: AppColors.whiteColor,),
                   ],
                 ),
@@ -150,18 +151,18 @@ class MainBasketScreen extends StatelessWidget {
             SizedBox(height: 9.h),
             ColorBorderWidget(
               child: Container(
-                height: 60,
-                width: 368,
+                height: 55.h,
+                width: 368.w,
                 decoration: BoxDecoration(
                     color: AppColors.secondColor,
-                    borderRadius: BorderRadius.circular(9),
+                    borderRadius: BorderRadius.circular(9.r),
                     border: Border.all(color: AppColors.mainColor)
                 ),
                 child: Row(
                   children: [
-                    SizedBox(width: 9.w,),
+                    SizedBox(width: 9.w),
                     Image.asset("tammara".getPngAsset),
-                    SizedBox(width: 9.w,),
+                    SizedBox(width: 9.w),
                     const TextWidget("دفع عن طريق تمارة",color: AppColors.whiteColor,),
                   ],
                 ),
@@ -174,8 +175,8 @@ class MainBasketScreen extends StatelessWidget {
             ),
             SizedBox(height: 9.h),
             Container(
-              height: 60,
-              width: 368,
+              height: 60.h,
+              width: 368.w,
               decoration: BoxDecoration(
                   color: AppColors.secondColor,
                   borderRadius: BorderRadius.circular(9),
@@ -235,11 +236,11 @@ class MainBasketScreen extends StatelessWidget {
             SizedBox(height: 9.h),
             ColorBorderWidget(
               child: Container(
-                height: 60,
-                width: 368,
+                height: 60.h,
+                width: 368.w,
                 decoration: BoxDecoration(
                     color: AppColors.secondColor,
-                    borderRadius: BorderRadius.circular(9),
+                    borderRadius: BorderRadius.circular(9.r),
                     border: Border.all(color: AppColors.mainColor)
                 ),
                 child: Padding(
@@ -257,11 +258,11 @@ class MainBasketScreen extends StatelessWidget {
             SizedBox(height: 14.h),
             ColorBorderWidget(
               child: Container(
-                height: 60,
-                width: 368,
+                height: 60.h,
+                width: 368.w,
                 decoration: BoxDecoration(
                     color: AppColors.secondColor,
-                    borderRadius: BorderRadius.circular(9),
+                    borderRadius: BorderRadius.circular(9.r),
                     border: Border.all(color: AppColors.mainColor)
                 ),
                 child: const Center(child: TextWidget("استمرار",color: AppColors.whiteColor,)),

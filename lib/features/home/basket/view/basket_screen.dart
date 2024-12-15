@@ -11,7 +11,7 @@ class BasketScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.mainColor,
-        title: const TextWidget.bigText("السلة",color: AppColors.whiteColor),
+        title: const TextWidget.bigText("السلة", color: AppColors.whiteColor,),
         centerTitle: true,
       ),
       body:

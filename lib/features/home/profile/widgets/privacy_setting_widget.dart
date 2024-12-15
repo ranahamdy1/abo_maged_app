@@ -15,7 +15,7 @@ class PrivacySettingWidget extends StatelessWidget {
       width: 368.w,
       decoration: BoxDecoration(
         color: backGroundColor,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12.r),
         border: Border.all(color: borderColor)
       ),
       child: Center(child: TextWidget(text)),

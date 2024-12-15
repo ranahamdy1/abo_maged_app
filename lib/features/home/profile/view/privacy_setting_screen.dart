@@ -40,7 +40,7 @@ class PrivacySettingScreen extends StatelessWidget {
               width: 583.w,
               decoration: BoxDecoration(
                 color: AppColors.babyMainColor,
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12.r),
                 border: Border.all(color: AppColors.whiteColorWithOpacity)
               ),
               child: Column(
@@ -59,9 +59,9 @@ class PrivacySettingScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 22.h,),
+            SizedBox(height: 22.h),
             const PrivacySettingWidget(text: 'أوافق علي سياسة التطبيق', backGroundColor: AppColors.secondColor, borderColor: AppColors.secondColor,),
-            SizedBox(height: 12.h,),
+            SizedBox(height: 12.h),
             PrivacySettingWidget(text: ' لا أوافق علي سياسة التطبيق', backGroundColor: Colors.transparent, borderColor: AppColors.whiteColorWithOpacity,),
           ],
         ),
