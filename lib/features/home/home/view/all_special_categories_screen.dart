@@ -2,6 +2,7 @@ import 'package:abo_maged_app/core/utils/app_assets.dart';
 import 'package:abo_maged_app/core/utils/app_colors.dart';
 import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
+import 'package:abo_maged_app/features/home/home/view/product_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -38,35 +39,40 @@ class AllSpecialCategoriesScreen extends StatelessWidget {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,),
           itemBuilder: (_, index) => Padding(
             padding: EdgeInsets.all(8.0.w),
-            child: Container(
-              height: 177.h,
-              width: 179.w,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.r),
-                  color:  AppColors.secondColor
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset("search_image".getPngAsset),
-                  Padding(
-                    padding: EdgeInsets.all(8.0.w),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            TextWidget("مفروم غنم"),
-                            TextWidget("120 ريال",color: AppColors.yellowColor,),
-                          ],
-                        ),
-                        SvgPicture.asset("favourite".getSvgAsset),
-                      ],
-                    ),
-                  )
-                ],
+            child: InkWell(
+              onTap: (){
+                AppRoutes.routeTo(context, const ProductDetailsScreen());
+              },
+              child: Container(
+                height: 177.h,
+                width: 179.w,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.r),
+                    color:  AppColors.secondColor
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Image.asset("search_image".getPngAsset),
+                    Padding(
+                      padding: EdgeInsets.all(8.0.w),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              TextWidget("مفروم غنم"),
+                              TextWidget("120 ريال",color: AppColors.yellowColor,),
+                            ],
+                          ),
+                          SvgPicture.asset("favourite".getSvgAsset),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
