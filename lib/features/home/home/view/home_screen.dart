@@ -1,7 +1,9 @@
 import 'package:abo_maged_app/core/utils/app_assets.dart';
 import 'package:abo_maged_app/core/utils/app_colors.dart';
+import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
 import 'package:abo_maged_app/features/home/home/view/main_home_screen.dart';
+import 'package:abo_maged_app/features/home/home/view/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -65,10 +67,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: 40.h,
-                    width: 40.w,
-                    child: Image.asset("search".getPngAsset),
+                  GestureDetector(
+                    onTap: (){
+                      AppRoutes.routeTo(context, const SearchScreen());
+                    },
+                    child: SizedBox(
+                      height: 40.h,
+                      width: 40.w,
+                      child: Image.asset("search".getPngAsset),
+                    ),
                   ),
                 ],
               ),
