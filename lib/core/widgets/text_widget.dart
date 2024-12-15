@@ -14,6 +14,7 @@ class TextWidget extends StatelessWidget {
         this.fontWeight,
         this.shadows,
         this.maxLines,
+        this.decoration,
       });
   final String text;
   final Color? color;
@@ -24,6 +25,7 @@ class TextWidget extends StatelessWidget {
   final FontWeight? fontWeight;
   final List<Shadow>? shadows;
   final int? maxLines;
+  final TextDecoration? decoration;
 
   const TextWidget.bigText(
       this.text, {
@@ -35,7 +37,7 @@ class TextWidget extends StatelessWidget {
         this.fontSize = 15,
         this.fontWeight = FontWeight.w700,
         this.shadows,
-        this.maxLines,
+        this.maxLines, this.decoration,
       });
   const TextWidget.smallText(
       this.text, {
@@ -47,7 +49,7 @@ class TextWidget extends StatelessWidget {
         this.fontSize = 14,
         this.fontWeight = FontWeight.w400,
         this.shadows,
-        this.maxLines,
+        this.maxLines, this.decoration,
       });
   const TextWidget.mediumText(
       this.text, {
@@ -59,7 +61,7 @@ class TextWidget extends StatelessWidget {
         this.fontSize = 12,
         this.fontWeight = FontWeight.w700,
         this.shadows,
-        this.maxLines,
+        this.maxLines, this.decoration,
       });
 
   @override
@@ -76,6 +78,7 @@ class TextWidget extends StatelessWidget {
         fontWeight: fontWeight,
         shadows: shadows,
         fontFamily: "Almarai",
+        decoration: decoration
       ),
     );
   }
