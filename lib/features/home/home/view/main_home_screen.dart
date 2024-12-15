@@ -1,8 +1,11 @@
 import 'package:abo_maged_app/core/utils/app_assets.dart';
 import 'package:abo_maged_app/core/utils/app_colors.dart';
+import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
+import 'package:abo_maged_app/features/home/home/view/all_categories_screen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MainHomeScreen extends StatefulWidget {
@@ -91,13 +94,18 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
         ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 18.0.w, vertical: 18.0.h),
-          child: const Row(
+          child: Row(
             children: [
-              TextWidget.bigText("التصنيفات", color: AppColors.whiteColor),
-              Spacer(),
-              TextWidget.smallText(
-                "عرض الكل",
-                color: AppColors.yellowColor,
+              const TextWidget.bigText("التصنيفات", color: AppColors.whiteColor),
+              const Spacer(),
+              InkWell(
+                onTap: (){
+                  AppRoutes.routeTo(context, AllCategoriesScreen());
+                },
+                child: const TextWidget.smallText(
+                  "عرض الكل",
+                  color: AppColors.yellowColor,
+                ),
               ),
             ],
           ),
