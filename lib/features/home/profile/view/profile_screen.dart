@@ -5,6 +5,7 @@ import 'package:abo_maged_app/core/widgets/text_widget.dart';
 import 'package:abo_maged_app/features/auth/sign_up/view/sign_up_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/my_address_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/my_data_screen.dart';
+import 'package:abo_maged_app/features/home/profile/view/my_fav_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/privacy_setting_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/use_rules_screen.dart';
 import 'package:abo_maged_app/features/home/profile/widgets/setting_widget.dart';
@@ -60,7 +61,7 @@ class ProfileScreen extends StatelessWidget {
                           const Divider(color: AppColors.mainColor),
                           InkWell(
                               onTap: (){
-                                AppRoutes.routeTo(context, MyDataScreen());
+                                AppRoutes.routeTo(context, const MyFavScreen());
                               },
                               child: const SettingWidget(image: 'my_fav', text: 'المفضلة', icon: Icons.arrow_forward_ios)),
                           const Divider(color: AppColors.mainColor),
