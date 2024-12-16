@@ -3,6 +3,7 @@ import 'package:abo_maged_app/core/utils/app_colors.dart';
 import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
 import 'package:abo_maged_app/features/auth/sign_up/view/sign_up_screen.dart';
+import 'package:abo_maged_app/features/home/profile/view/my_address_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/my_data_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/privacy_setting_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/use_rules_screen.dart';
@@ -53,7 +54,7 @@ class ProfileScreen extends StatelessWidget {
                           const Divider(color: AppColors.mainColor),
                           InkWell(
                               onTap: (){
-                                AppRoutes.routeTo(context, MyDataScreen());
+                                AppRoutes.routeTo(context, const MyAddressScreen());
                               },
                               child: const SettingWidget(image: 'my_address', text: 'عناويني', icon: Icons.arrow_forward_ios)),
                           const Divider(color: AppColors.mainColor),
