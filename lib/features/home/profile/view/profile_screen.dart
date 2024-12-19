@@ -111,7 +111,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 8.h),
                   Container(
-                    height: 300.h,
+                    height: 333.h,
                     width: 348.w,
                     decoration: BoxDecoration(
                         color: AppColors.secondColor,

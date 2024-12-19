@@ -8,6 +8,7 @@ import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
 import 'package:abo_maged_app/features/welcome/on_boarding/controller/on_boarding/on_boarding_cubit.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -29,20 +30,23 @@ class OnBoardingScreen extends StatelessWidget {
             body: SafeArea(
               child: Column(
                 children: [
-                  5.hSize,
+                  SizedBox(height: 5.h),
                   Align(
-                      alignment: Alignment.bottomRight,
-                      child: GestureDetector(
-                          onTap: () {
-                            AppRoutes.routeAndRemoveTo(context, const MainNavigationScreen());
-                          },
-                          child: Padding(
-                            padding: 18.aEdge,
-                            child: const TextWidget.smallText("تخطي", color: AppColors.yellowColor, fontSize: 16,),
-                          ),
+                    alignment: Alignment.bottomRight,
+                    child: GestureDetector(
+                      onTap: () {
+                        AppRoutes.routeAndRemoveTo(context, const MainNavigationScreen());
+                      },
+                      child: Padding(
+                        padding: EdgeInsets.all(18.r),
+                        child: const TextWidget.smallText(
+                          "تخطي",
+                          color: AppColors.yellowColor,
+                          fontSize: 16,
+                        ),
                       ),
+                    ),
                   ),
-                  20.hSize,
                   Expanded(
                     child: PageView.builder(
                       controller: onBoarding.pageController,
@@ -53,22 +57,23 @@ class OnBoardingScreen extends StatelessWidget {
                       itemBuilder: (context, i) => Column(
                         children: [
                           SizedBox(
-                              height: 246,
-                              width: 371,
-                              child: SvgPicture.asset(onBoarding.onBoardingList[i].image)),
-                          33.hSize,
+                            height: 246.h,
+                            width: 371.w,
+                            child: SvgPicture.asset(onBoarding.onBoardingList[i].image),
+                          ),
                           Padding(
-                            padding: const EdgeInsets.all(4.0),
+                            padding: EdgeInsets.all(4.r),
                             child: Column(
                               children: [
                                 TextWidget.bigText(
                                   onBoarding.onBoardingList[i].title,
                                   color: AppColors.yellowColor,
                                 ),
-                                33.hSize,
+                                SizedBox(height: 12.h),
                                 TextWidget.smallText(
                                   onBoarding.onBoardingList[i].body,
                                   color: AppColors.whiteColor,
+                                  textAlign: TextAlign.center,
                                 ),
                               ],
                             ),
@@ -83,36 +88,12 @@ class OnBoardingScreen extends StatelessWidget {
                       children: [
                         SvgPicture.asset("on_boarding".getSvgAsset),
                         Positioned(
-                          bottom: 33,
-                          right: 33,
-                          left: 33,
+                          bottom: 33.h,
+                          right: 33.w,
+                          left: 33.w,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Container(
-                                height: 68,
-                                width: 68,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(88),
-                                  border: Border.all(color: AppColors.whiteColor),
-                                ),
-                                child: onBoarding.currentPage == onBoarding.onBoardingList.length - 1
-                                    ? GestureDetector(
-                                  onTap: () {
-                                    AppRoutes.routeAndRemoveAllTo(context, const MainNavigationScreen());
-                                  },
-                                  child: const Center(child: TextWidget.bigText("أبدأ", color: AppColors.whiteColor,),),)
-                                    : GestureDetector(
-                                  onTap: () {
-                                    context.read<OnBoardingCubit>().next();
-                                  },
-                                  child: const Icon(
-                                    Icons.arrow_back,
-                                    color: AppColors.whiteColor,
-                                  ),
-                                ),
-                              ),
-                              22.wSize,
                               Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: List.generate(
@@ -120,13 +101,45 @@ class OnBoardingScreen extends StatelessWidget {
                                       (index) => AnimatedContainer(
                                     duration: const Duration(milliseconds: 500),
                                     curve: Curves.bounceInOut,
-                                    width: index == onBoarding.currentPage ? 44 : 8,
-                                    height: 8,
-                                    margin: const EdgeInsets.all(2),
+                                    width: index == onBoarding.currentPage ? 44.w : 8.w,
+                                    height: 8.h,
+                                    margin: EdgeInsets.all(2.r),
                                     decoration: BoxDecoration(
-                                      color: index == onBoarding.currentPage ? AppColors.whiteColor : AppColors.whiteColorWithOpacity,
-                                      borderRadius: BorderRadius.circular(4),
+                                      color: index == onBoarding.currentPage
+                                          ? AppColors.whiteColor
+                                          : AppColors.whiteColorWithOpacity,
+                                      borderRadius: BorderRadius.circular(4.r),
                                     ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 22.w),
+                              Container(
+                                height: 68.r,
+                                width: 68.r,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(88.r),
+                                  border: Border.all(color: AppColors.whiteColor),
+                                ),
+                                child: onBoarding.currentPage == onBoarding.onBoardingList.length - 1
+                                    ? GestureDetector(
+                                  onTap: () {
+                                    AppRoutes.routeAndRemoveAllTo(context, const MainNavigationScreen());
+                                  },
+                                  child: const Center(
+                                    child: TextWidget.bigText(
+                                      "أبدأ",
+                                      color: AppColors.whiteColor,
+                                    ),
+                                  ),
+                                )
+                                    : GestureDetector(
+                                  onTap: () {
+                                    context.read<OnBoardingCubit>().next();
+                                  },
+                                  child: const Icon(
+                                    Icons.arrow_forward,
+                                    color: AppColors.whiteColor,
                                   ),
                                 ),
                               ),

@@ -26,11 +26,11 @@ class _NavigationExampleState extends State<MainNavigationScreen> {
         return Container(
           height: 223.h,
           width: 427.w,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: AppColors.secondColor,
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(22.0),
-              topRight: Radius.circular(22.0),
+              topLeft: Radius.circular(22.0.r),
+              topRight: Radius.circular(22.0.r),
             ),
           ),
           child: Column(
