@@ -3,6 +3,7 @@ import 'package:abo_maged_app/core/utils/app_colors.dart';
 import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
 import 'package:abo_maged_app/features/auth/sign_up/view/sign_up_screen.dart';
+import 'package:abo_maged_app/features/home/profile/view/common_question_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/my_address_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/my_data_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/my_fav_screen.dart';
@@ -120,20 +121,24 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: EdgeInsets.all(18.0.w),
-                      child: const Column(
+                      child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SettingWidget(image: 'lang', text: 'تواصل معنا عبر واتساب'),
-                          Divider(color: AppColors.mainColor),
-                          SettingWidget(image: 'light', text: 'الاسئلة الشائعة', icon: Icons.arrow_forward_ios),
-                          Divider(color: AppColors.mainColor),
-                          SettingWidget(image: 'light', text: 'عن التطبيق', icon: Icons.arrow_forward_ios),
-                          Divider(color: AppColors.mainColor),
-                          SettingWidget(image: 'dark', text: 'خدماتنا', icon: Icons.arrow_forward_ios),
-                          Divider(color: AppColors.mainColor),
-                          SettingWidget(image: 'main_color', text: 'قيم التطبيق'),
-                          Divider(color: AppColors.mainColor),
-                          SettingWidget(image: 'dark', text: 'مشاركة التطبيق'),
+                          const SettingWidget(image: 'lang', text: 'تواصل معنا عبر واتساب'),
+                          const Divider(color: AppColors.mainColor),
+                          InkWell(
+                              onTap: (){
+                                AppRoutes.routeTo(context, const CommonQuestionScreen());
+                              },
+                              child: const SettingWidget(image: 'light', text: 'الاسئلة الشائعة', icon: Icons.arrow_forward_ios)),
+                          const Divider(color: AppColors.mainColor),
+                          const SettingWidget(image: 'light', text: 'عن التطبيق', icon: Icons.arrow_forward_ios),
+                          const Divider(color: AppColors.mainColor),
+                          const SettingWidget(image: 'dark', text: 'خدماتنا', icon: Icons.arrow_forward_ios),
+                          const Divider(color: AppColors.mainColor),
+                          const SettingWidget(image: 'main_color', text: 'قيم التطبيق'),
+                          const Divider(color: AppColors.mainColor),
+                          const SettingWidget(image: 'dark', text: 'مشاركة التطبيق'),
                         ],
                       ),
                     ),
