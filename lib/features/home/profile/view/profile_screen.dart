@@ -3,6 +3,7 @@ import 'package:abo_maged_app/core/utils/app_colors.dart';
 import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
 import 'package:abo_maged_app/features/auth/sign_up/view/sign_up_screen.dart';
+import 'package:abo_maged_app/features/home/profile/view/about_app_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/common_question_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/my_address_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/my_data_screen.dart';
@@ -132,7 +133,11 @@ class ProfileScreen extends StatelessWidget {
                               },
                               child: const SettingWidget(image: 'light', text: 'الاسئلة الشائعة', icon: Icons.arrow_forward_ios)),
                           const Divider(color: AppColors.mainColor),
-                          const SettingWidget(image: 'light', text: 'عن التطبيق', icon: Icons.arrow_forward_ios),
+                          InkWell(
+                              onTap: (){
+                                AppRoutes.routeTo(context, const AboutAppScreen());
+                              },
+                              child: const SettingWidget(image: 'light', text: 'عن التطبيق', icon: Icons.arrow_forward_ios)),
                           const Divider(color: AppColors.mainColor),
                           const SettingWidget(image: 'dark', text: 'خدماتنا', icon: Icons.arrow_forward_ios),
                           const Divider(color: AppColors.mainColor),
