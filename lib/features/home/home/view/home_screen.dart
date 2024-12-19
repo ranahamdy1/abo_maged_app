@@ -4,6 +4,7 @@ import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
 import 'package:abo_maged_app/features/home/home/view/main_home_screen.dart';
 import 'package:abo_maged_app/features/home/home/view/search_screen.dart';
+import 'package:abo_maged_app/features/map/view/map_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -91,6 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       setState(() {
                         isHomeDeliverySelected = true;
                         isPickupSelected = false;
+                        AppRoutes.routeTo(context, MapScreen());
                       });
                     },
                     asset: "drivery".getSvgAsset,
