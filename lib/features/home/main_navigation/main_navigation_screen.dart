@@ -67,47 +67,48 @@ class _NavigationExampleState extends State<MainNavigationScreen> {
               height: 72,
               width: 412,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18),
-                  color: AppColors.secondColor
+                borderRadius: BorderRadius.circular(18),
+                color: AppColors.secondColor,
               ),
               child: Center(
                 child: NavigationBar(
                   backgroundColor: Colors.transparent,
                   onDestinationSelected: (int index) {
-                    setState(() {
-                      currentPageIndex = index;
-                    });
-
-                    // Show bottom sheet when the "Orders" destination is selected (index 2)
-                    if (index == 3) {
+                    if (index == 4) {
+                      // Show BottomSheet when index is 4
                       _showBottomSheet(context);
+                    } else {
+                      // Change the screen only for valid indices
+                      setState(() {
+                        currentPageIndex = index;
+                      });
                     }
                   },
                   selectedIndex: currentPageIndex,
                   destinations: <Widget>[
                     NavigationDestination(
-                      selectedIcon: const SelectionIconWidget(image: 'home_icon2',),
+                      selectedIcon: const SelectionIconWidget(image: 'home_icon2'),
                       icon: SvgPicture.asset("home_icon1".getSvgAsset),
                       label: '',
                     ),
                     NavigationDestination(
-                      selectedIcon: const SelectionIconWidget(image: 'delete2',),
+                      selectedIcon: const SelectionIconWidget(image: 'delete2'),
                       icon: SvgPicture.asset("delete1".getSvgAsset),
                       label: '',
                     ),
                     NavigationDestination(
-                      selectedIcon: const SelectionIconWidget(image: 'order2',),
+                      selectedIcon: const SelectionIconWidget(image: 'order2'),
                       icon: SvgPicture.asset("order1".getSvgAsset),
                       label: '',
                     ),
                     NavigationDestination(
-                      selectedIcon: const SelectionIconWidget(image: 'basket2',),
-                      icon: SvgPicture.asset("basket1".getSvgAsset),
+                      selectedIcon: const SelectionIconWidget(image: 'profile2'),
+                      icon: SvgPicture.asset("profile1".getSvgAsset),
                       label: '',
                     ),
                     NavigationDestination(
-                      selectedIcon: const SelectionIconWidget(image: 'profile2',),
-                      icon: SvgPicture.asset("profile1".getSvgAsset),
+                      selectedIcon: const SelectionIconWidget(image: 'basket2'),
+                      icon: SvgPicture.asset("basket1".getSvgAsset),
                       label: '',
                     ),
                   ],
@@ -116,12 +117,13 @@ class _NavigationExampleState extends State<MainNavigationScreen> {
             ),
           ),
         ),
+        // Ensure currentPageIndex is within valid range
         body: <Widget>[
           const HomeScreen(),
           const BasketScreen(),
           const OrdersScreen(),
-          const HomeScreen(),
           const ProfileScreen(),
+          // Profile screen is now correctly placed at index 4
         ][currentPageIndex],
       ),
     );
