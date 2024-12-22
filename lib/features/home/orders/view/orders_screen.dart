@@ -23,6 +23,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
         backgroundColor: AppColors.mainColor,
         title: const TextWidget.bigText("الطلبات", color: AppColors.whiteColor,),
         centerTitle: true,
+        leading: const Icon(Icons.arrow_back,color: AppColors.whiteColor,),
       ),
       body: Column(
         children: [

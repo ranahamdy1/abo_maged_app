@@ -71,7 +71,7 @@ class ProfileScreen extends StatelessWidget {
                           const Divider(color: AppColors.mainColor),
                           InkWell(
                               onTap: (){
-                                AppRoutes.routeTo(context, MyDataScreen());
+                                //AppRoutes.routeTo(context, MyDataScreen());
                               },
                               child: const SettingWidget(image: 'delete_account', text: 'حذف الحساب')),
                         ],

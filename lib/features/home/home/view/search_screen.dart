@@ -3,6 +3,7 @@ import 'package:abo_maged_app/core/utils/app_routes.dart';
 import 'package:abo_maged_app/core/widgets/text_widget.dart';
 import 'package:abo_maged_app/features/home/home/view/search_result_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -48,7 +49,10 @@ class _SearchScreenState extends State<SearchScreen> {
             onTap: (){
               AppRoutes.pop(context);
             },
-              child: const Icon(Icons.clear,color: AppColors.whiteColor,size: 24,)),
+              child: Padding(
+                padding: EdgeInsets.all(8.0.w),
+                child: const Icon(Icons.clear,color: AppColors.whiteColor,size: 24,),
+              )),
         ],
       ),
       body: SingleChildScrollView(

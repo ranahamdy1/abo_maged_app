@@ -35,7 +35,7 @@ class NotificationScreen extends StatelessWidget {
             padding: EdgeInsets.all(5.0.w),
             child: GestureDetector(
               onTap: () {
-                AppRoutes.pop(context);
+                //AppRoutes.pop(context);
               },
               child: SizedBox(
                 height: 40.h,

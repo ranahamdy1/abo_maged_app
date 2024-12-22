@@ -34,34 +34,34 @@ class AllCategoriesScreen extends StatelessWidget {
         width: double.infinity,
         child: GridView.builder(
           shrinkWrap: true,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          padding: EdgeInsets.all(8.0.w),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3,
+            childAspectRatio: 0.8,
+            mainAxisSpacing: 8.h,
+            crossAxisSpacing: 8.w,
           ),
           itemBuilder: (_, index) {
             final containerColor =
             index % 2 == 0 ? AppColors.secondColor : AppColors.babyMainColor;
 
-            return Padding(
-              padding: EdgeInsets.all(5.0.w),
-              child: Container(
-                height: 122.h,
-                width: 117.w,
-                decoration: BoxDecoration(
-                  color: containerColor,
-                  borderRadius: BorderRadius.circular(9.r),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.all(2.0.w),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset("categ".getPngAsset),
-                      const TextWidget(
-                        "مفروم",
-                        color: AppColors.whiteColor,
-                      ),
-                    ],
-                  ),
+            return Container(
+              decoration: BoxDecoration(
+                color: containerColor,
+                borderRadius: BorderRadius.circular(9.r),
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(8.0.w),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset("categ".getPngAsset, height: 60.h),
+                    const TextWidget(
+                      "مفروم",
+                      color: AppColors.whiteColor,
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
                 ),
               ),
             );

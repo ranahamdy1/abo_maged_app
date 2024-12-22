@@ -13,6 +13,7 @@ class BasketScreen extends StatelessWidget {
         backgroundColor: AppColors.mainColor,
         title: const TextWidget.bigText("السلة", color: AppColors.whiteColor,),
         centerTitle: true,
+        leading: const Icon(Icons.arrow_back,color: AppColors.whiteColor,),
       ),
       body:
       /*Center(

@@ -60,7 +60,7 @@ class SearchResultScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              itemCount: 8,
+              itemCount: 6,
             ),
           ),
         ],
