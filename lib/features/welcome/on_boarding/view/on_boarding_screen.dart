@@ -1,7 +1,6 @@
 import 'package:abo_maged_app/features/home/main_navigation/main_navigation_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:abo_maged_app/core/extensions/assets_widgets.dart';
 import 'package:abo_maged_app/core/utils/app_assets.dart';
 import 'package:abo_maged_app/core/utils/app_colors.dart';
 import 'package:abo_maged_app/core/utils/app_routes.dart';

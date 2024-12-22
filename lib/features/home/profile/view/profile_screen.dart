@@ -8,6 +8,7 @@ import 'package:abo_maged_app/features/home/profile/view/common_question_screen.
 import 'package:abo_maged_app/features/home/profile/view/my_address_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/my_data_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/my_fav_screen.dart';
+import 'package:abo_maged_app/features/home/profile/view/notification_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/our_services_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/privacy_setting_screen.dart';
 import 'package:abo_maged_app/features/home/profile/view/use_rules_screen.dart';
@@ -84,7 +85,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 8.h),
                   Container(
-                    height: 222.h,
+                    height: 277.h,
                     width: 348.w,
                     decoration: BoxDecoration(
                         color: AppColors.secondColor,
@@ -93,16 +94,22 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: EdgeInsets.all(18.0.w),
-                      child: const Column(
+                      child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SettingWidget(image: 'lang', text: 'English'),
-                          Divider(color: AppColors.mainColor),
-                          SettingWidget(image: 'light', text: 'الوضع المضئ'),
-                          Divider(color: AppColors.mainColor),
-                          SettingWidget(image: 'main_color', text: 'الوضع الاساسي'),
-                          Divider(color: AppColors.mainColor),
-                          SettingWidget(image: 'dark', text: 'الوضع الليلي'),
+                          const SettingWidget(image: 'lang', text: 'English'),
+                          const Divider(color: AppColors.mainColor),
+                          InkWell(
+                              onTap: (){
+                                AppRoutes.routeTo(context, const NotificationScreen());
+                              },
+                              child: const SettingWidget(image: 'lang', text: 'الاشعارات')),
+                          const Divider(color: AppColors.mainColor),
+                          const SettingWidget(image: 'light', text: 'الوضع المضئ'),
+                          const Divider(color: AppColors.mainColor),
+                          const SettingWidget(image: 'main_color', text: 'الوضع الاساسي'),
+                          const Divider(color: AppColors.mainColor),
+                          const SettingWidget(image: 'dark', text: 'الوضع الليلي'),
                         ],
                       ),
                     ),
